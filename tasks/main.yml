@@ -4,6 +4,7 @@
   file:
     path: "/etc/ansible/facts.d"
     state: "directory"
+    mode: 0755
 
 - name: "Insert custom fact file"
   copy:
