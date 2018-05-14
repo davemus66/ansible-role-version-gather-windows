@@ -1,0 +1,5 @@
+#!/bin/bash
+hostname=`cat /etc/hostname`
+echo "{\"local_fact_hostname\" : \"${hostname}\"}"
+
+

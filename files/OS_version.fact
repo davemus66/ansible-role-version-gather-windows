@@ -1,0 +1,5 @@
+#!/bin/bash
+OS=`cat /etc/redhat-release`
+echo "{\"local_fact_OS_version\" : \"${OS}\"}"
+
+

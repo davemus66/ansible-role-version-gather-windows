@@ -1,0 +1,3 @@
+#!/bin/bash
+beat=`metricbeat --version`
+echo "{\"local_fact_metricbeat\" : \"${beat}\"}"

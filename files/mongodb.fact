@@ -1,0 +1,5 @@
+#!/bin/bash
+mongodb=`mongod --version | grep "db version"`
+echo "{\"local_fact_mongodb\" : \"${mongodb}\"}"
+
+

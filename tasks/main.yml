@@ -1,0 +1,32 @@
+---
+# tasks file for ansible-role-version-gather-linux
+
+- name: "Create custom fact directory"
+  file:
+    path: "/etc/ansible/facts.d"
+    state: "directory"
+
+- name: "Insert custom fact file"
+  copy:
+    src: "{{ item }}"
+    dest: /etc/ansible/facts.d/{{ item }}.fact
+    mode: 0755
+  with_items: 
+     - filebeat.fact
+     - ForumSentry.fact
+     - heartbeat.fact
+     - hostname.fact
+     - filebeat.fact
+     - ForumSentry.fact
+     - heartbeat.fact
+     - hostname.fact
+     - metricbeat.fact
+     - mongodb.fact
+     - OS_version.fact
+     - packetbeat.fact
+     - rabbitmq.fact
+   
+
+- name: "Re-run setup to use custom facts"
+  setup: ~
+

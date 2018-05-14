@@ -1,0 +1,5 @@
+#!/bin/bash
+beat=`heartbeat --version`
+echo "{\"local_fact_heartbeat\" : \"${beat}\"}"
+
+
