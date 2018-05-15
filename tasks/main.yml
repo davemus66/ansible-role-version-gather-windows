@@ -9,7 +9,7 @@
 - name: "Insert custom fact file"
   copy:
     src: "{{ item }}"
-    dest: /etc/ansible/facts.d/{{ item }}.fact
+    dest: /etc/ansible/facts.d/{{ item }}
     mode: 0755
   with_items: 
      - filebeat.fact

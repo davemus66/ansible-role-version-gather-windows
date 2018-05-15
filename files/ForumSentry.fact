@@ -1,5 +1,8 @@
 #!/bin/bash
-forum=`grep -oPm1 "(?<=<version>)[^<]+" /app/fsentry/xmlserver/config/license.xml`
+#forum=`grep -oPm1 "(?<=<version>)[^<]+" /app/fsentry/xmlserver/config/license.xml`
+
+forum=`cat /app/fsentry/xmlserver/webadmin/static/help/sentry.version`
+
 echo "{\"local_fact_forumsentry\" : \"${forum}\"}"
 
 
