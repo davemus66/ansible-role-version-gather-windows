@@ -1,7 +1,7 @@
 #!/bin/bash
 #forum=`grep -oPm1 "(?<=<version>)[^<]+" /app/fsentry/xmlserver/config/license.xml`
 
-forum=`cat /app/fsentry/xmlserver/webadmin/static/help/sentry.version`
+forum=`grep PRODUCT_VERSION_NUMBER /app/fsentry/uninstall/installvariables.properties`
 
 echo "{\"local_fact_forumsentry\" : \"${forum}\"}"
 
