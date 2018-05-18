@@ -2,14 +2,14 @@
 
 - name: "Create custom fact directory"
   file:
-    path: "/etc/ansible/facts.d"
+    path: "c:\ansible\facts.d"
     state: "directory"
     mode: 0755
 
 - name: "Insert custom fact file"
   copy:
     src: "{{ item }}"
-    dest: /etc/ansible/facts.d/{{ item }}
+    dest: c:\ansible\facts.d/{{ item }}
     mode: 0755
   with_items: 
      - win_filebeat.fact
