@@ -1,9 +1,9 @@
 ---
 
--- name: Copy over template beatsversion.j2
+- name: Copy over template beatsversion.j2
   win_template:
-    src: beatsversion.j2
-    dest: C:\beatsversion.bat
+  src: beatsversion.j2
+  dest: C:\beatsversion.bat
         
 - name: Run the command on windows box
   win_shell: C:\beatsversion.bat
