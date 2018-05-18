@@ -1,20 +1,9 @@
 ---
 
-- name: "Create custom fact directory"
-  file:
-    path: "c:\ansible\facts.d"
-    state: "directory"
-    mode: 0755
-
-- name: "Insert custom fact file"
-  copy:
-    src: "{{ item }}"
-    dest: c:\ansible\facts.d/{{ item }}
-    mode: 0755
-  with_items: 
-     - win_filebeat.fact
-
-   
-
-- name: "Re-run setup to use custom facts"
-  setup: ~
+-- name: Copy over template beatsversion.j2
+  win_template:
+    src: beatsversion.j2
+    dest: C:\beatsversion.bat
+        
+- name: Run the command on windows box
+  win_shell: C:\beatsversion.bat
