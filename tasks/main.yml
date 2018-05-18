@@ -6,4 +6,4 @@
     dest: C:\beatsversion.bat
         
 - name: Run the command on windows box
-  win_shell: C:\beatsversion.bat
+  win_command: C:\beatsversion.bat
