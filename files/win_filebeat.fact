@@ -1,0 +1,6 @@
+#!/bin/bash
+cd "C:\Program Files\filebeat"
+beat=`filebeat version`
+echo "{\"local_fact_filebeat\" : \"${beat}\"}"
+
+

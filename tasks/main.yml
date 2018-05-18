@@ -12,21 +12,9 @@
     dest: /etc/ansible/facts.d/{{ item }}
     mode: 0755
   with_items: 
-     - filebeat.fact
-     - ForumSentry.fact
-     - heartbeat.fact
-     - hostname.fact
-     - filebeat.fact
-     - ForumSentry.fact
-     - heartbeat.fact
-     - hostname.fact
-     - metricbeat.fact
-     - mongodb.fact
-     - OS_version.fact
-     - packetbeat.fact
-     - rabbitmq.fact
+     - win_filebeat.fact
+
    
 
 - name: "Re-run setup to use custom facts"
   setup: ~
-
