@@ -13,4 +13,4 @@
 
 #- debug: msg="{{ ansible_local }}" 
 #- debug: msg="{{ ansible_local('\n') }}"
-- debug: msg="{{  ansible_local }}\`\n`}"
+- debug: msg="{{  ansible_local  }}"
