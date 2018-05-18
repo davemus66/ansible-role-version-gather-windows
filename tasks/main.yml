@@ -1,9 +1,13 @@
 ---
+- name: create custom_facts directory
+  win_file c:\custom_facts
 
 - name: Copy over template beatsversion.j2
   win_template:
     src: beatsversion.j2
-    dest: C:\beatsversion.bat
+    dest: c:\custom_facts\beatsversion.ps1
         
-- name: Run the command on windows box
-  win_command: C:\beatsversion.bat
+- name:"Re-run setup to use custom facts"
+    setup: ~
+
+- debug: msg="{{ ansible_local }}" 
