@@ -11,4 +11,5 @@
 - name: "Re-run setup to use custom facts"
   setup: ~
 
-- debug: msg="{{ ansible_local }}" 
+#- debug: msg="{{ ansible_local }}" 
+- debug: msg="{{ ansible_local('\n') }}"
