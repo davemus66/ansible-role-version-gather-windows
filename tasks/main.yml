@@ -10,7 +10,7 @@
     src: beatsversion.j2
     dest: c:\custom_facts\beatsversion.ps1
         
-- name:"Re-run setup to use custom facts"
-  setup: 
+- name: "Re-run setup to use custom facts"
+  setup: ~
 
 - debug: msg="{{ ansible_local }}" 
