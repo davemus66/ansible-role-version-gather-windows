@@ -1,5 +1,0 @@
-#!/bin/bash
-beat=`packetbeat --version`
-echo "{\"local_fact_packetbeat\" : \"${beat}\"}"
-
-

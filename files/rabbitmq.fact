@@ -1,4 +1,0 @@
-#!/bin/bash
-rabbitmq=`rpm -qa | grep rabbitmq`
-echo "{\"local_fact_rabbitmq_version\" : \"${rabbitmq}\"}"
-

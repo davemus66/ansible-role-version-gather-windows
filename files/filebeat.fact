@@ -1,5 +1,0 @@
-#!/bin/bash
-beat=`filebeat --version`
-echo "{\"local_fact_filebeat\" : \"${beat}\"}"
-
-
