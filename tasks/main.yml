@@ -11,6 +11,6 @@
     dest: c:\custom_facts\beatsversion.ps1
         
 - name:"Re-run setup to use custom facts"
-  setup: ~
+  setup: 
 
 - debug: msg="{{ ansible_local }}" 
