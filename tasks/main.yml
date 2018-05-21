@@ -10,7 +10,7 @@
     src: beatsversion.j2
     dest: c:\custom_facts\beatsversion.ps1
 
-- name:"Re-run setup to use custom facts"
-  shell: ansible windows -m setup -a "fact_path='c:\custom_facts'" | grep file
-      register: result
-    - debug: msg="{{ result.stdout }}"        
+#- name:"Re-run setup to use custom facts"
+#  shell: ansible windows -m setup -a "fact_path='c:\custom_facts'" | grep file
+#      register: result
+#    - debug: msg="{{ result.stdout }}"        
