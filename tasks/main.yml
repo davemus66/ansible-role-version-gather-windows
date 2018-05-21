@@ -1,3 +1,5 @@
+---
+
 - name: Create directory structure
   win_file:
     path: c:\custom_facts
@@ -7,11 +9,12 @@
   win_template:
     src: beatsversion.j2
     dest: c:\custom_facts\beatsversion.ps1
-        
+
 - name:"Re-run setup to use custom facts"
-  setup: ~
+  setup: 
+  ansible windows -m setup -a "fact_path='c:\custom_facts'"
   register: result
-#- debug: msg="{{ ansible_local }}" 
-#- debug: msg="{{ ansible_local('\n') }}"
-- debug: 
+#- debug: msg="{{ ansible_local }}"
+##- debug: msg="{{ ansible_local('\n') }}"
+- debug:
     msg="{{  ansible_local  }}"
